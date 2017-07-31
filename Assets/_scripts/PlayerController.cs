@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-//master
+//master added_cameras
 public class PlayerController : MonoBehaviour {
 
 	private Rigidbody rb;
@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-
-		float burn = Input.GetAxis ("Burn");
+		float burn = Input.GetAxis("Burn");
 
 
 
