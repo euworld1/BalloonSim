@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	float startTemp = 160f;
 	float currentEnvelopeTemp; 
 	float burnAcc = 500;
+	float coolAcc = -500;
 	float coolingRate =10;
 
 
@@ -16,8 +17,6 @@ public class PlayerController : MonoBehaviour {
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
-		Invoke ("FixedUpdate", 5.0f);
-
 		currentEnvelopeTemp = startTemp;
 	}	
 
@@ -27,8 +26,8 @@ public class PlayerController : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-
 		float burn = Input.GetAxis ("Burn");
+		float cool = Input.GetAxis ("TopOpen");
 
 
 
@@ -36,12 +35,13 @@ public class PlayerController : MonoBehaviour {
 
 
 		//Debug.Log (burn + " current burn value");
-		Debug.Log (coolingRate + " currnet cool value");
-		Debug.Log (burnAcc + " current burnACC");
-		Debug.Log (currentEnvelopeTemp + " current ETemp");
+		//Debug.Log (coolingRate + " currnet cool value");
+		//Debug.Log (burnAcc + " current burnACC");
+		//Debug.Log (currentEnvelopeTemp + " current ETemp");
 		//Debug.Log (finalAcc + " FinalAcc");
+		Debug.Log (cool + " cooling");
 
-		//this assigns a value to the y vector
+		//this assigns a value to the xz vector
 		Vector3 xzmovement = new Vector3 (moveHorizontal * 500, 0, moveVertical * 500);
 		//		Debug.Log ("Current Altitude " + altitude);
 		//this moves the rigid body
@@ -50,7 +50,11 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce(xzmovement);
 		if (burn == 1) 
 		{
-			Invoke("BurnDelay", 3.0f);
+			Invoke("BurnDelay", 4.0f);
+		}
+		if (cool == 1) 
+		{
+			Invoke("TopOpenDelay", 3.0f);
 		}
 
 
@@ -65,9 +69,16 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce(movementy);
 	}
 
+	void TopOpenDelay()
+	{
+		float topOpen = coolAcc;
+		Vector3 coolMovement = new Vector3 (0, topOpen, 0);
+		rb.AddForce (coolMovement);
+	}
+
 	void TopOpen ()
 	{
-		float topOpen = Input.GetAxis ("TopOpen");
+		
 	}
 
 
