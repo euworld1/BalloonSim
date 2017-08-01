@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonSimulator", "Assembly-CSharp.csproj", "{13394A4A-7B83-55D1-5290-5B8911688A57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonSimulator", "Assembly-CSharp-firstpass.csproj", "{5C6D1EC4-DAFE-AC52-CA21-79D0E03D325A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonSimulator", "Assembly-CSharp-Editor-firstpass.csproj", "{6D7584B0-2FAA-DF89-190C-137EF3FDB481}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonSimulator", "Assembly-CSharp-Editor.csproj", "{11EAFFAF-A9EC-3DAE-60AD-E6C43D4E9BD9}"
 EndProject
 Global
@@ -15,6 +19,14 @@ Global
 		{13394A4A-7B83-55D1-5290-5B8911688A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13394A4A-7B83-55D1-5290-5B8911688A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13394A4A-7B83-55D1-5290-5B8911688A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6D1EC4-DAFE-AC52-CA21-79D0E03D325A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6D1EC4-DAFE-AC52-CA21-79D0E03D325A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6D1EC4-DAFE-AC52-CA21-79D0E03D325A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6D1EC4-DAFE-AC52-CA21-79D0E03D325A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7584B0-2FAA-DF89-190C-137EF3FDB481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7584B0-2FAA-DF89-190C-137EF3FDB481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7584B0-2FAA-DF89-190C-137EF3FDB481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7584B0-2FAA-DF89-190C-137EF3FDB481}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11EAFFAF-A9EC-3DAE-60AD-E6C43D4E9BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11EAFFAF-A9EC-3DAE-60AD-E6C43D4E9BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11EAFFAF-A9EC-3DAE-60AD-E6C43D4E9BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
