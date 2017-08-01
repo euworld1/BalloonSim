@@ -5,7 +5,7 @@ using UnityEngine;
 public class Burn : MonoBehaviour 
 {
 
-	public Transform Fire;
+	public Transform BurnerObject;
 	public GameObject Prefab;
 	// Use this for initialization
 	void Start () 
@@ -34,7 +34,10 @@ public class Burn : MonoBehaviour
 		//ParticleSystem ps = GetComponent<ParticleSystem>();
 		//Destroy (burner.gameObject);	
 					
-		Instantiate (Prefab, Fire.position, Fire.rotation);
+		Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
+		//AudioSource audio = GetComponent<AudioSource> ();
+
+		//audio.Play;
 			
 
 	}
@@ -50,5 +53,6 @@ public class Burn : MonoBehaviour
 	void OnTriggerExit(Collider burner)
 	{
 		Debug.Log ("Hand is not touching the burner anymore");
+		Destroy (BurnerObject, 1f);
 	}
 }
