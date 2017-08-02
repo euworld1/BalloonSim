@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Burn : MonoBehaviour 
 {
+	//private AudioSource burnersound;
 	private Rigidbody rb;
 	float startTemp = 160f;
 	float currentEnvelopeTemp; 
@@ -17,8 +18,11 @@ public class Burn : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		//burnersound = GetComponent<AudioSource> ();
 		rb = GetComponent<Rigidbody>();
 		currentEnvelopeTemp = startTemp;
+
+		//burnsound = GetComponent<AudioSource> ();
 		//Fire.GetComponent<ParticleSystem>().enableEmission = true;
 		//ps = GetComponent<ParticleSystem>();
 
@@ -44,17 +48,25 @@ public class Burn : MonoBehaviour
 	
 	void OnTriggerEnter()
 	{
-		
-		Debug.Log ("Hand is touching the burner start");
+		//burnersound.Play();
+
+		//Debug.Log ("Hand is touching the burner start");
 		//Fire.GetComponent<ParticleSystem> ().enableEmission = true;
 		//burner.rigidbody.GetComponent<ParticleSystem> ().enableEmission;
 		//ParticleSystem ps = GetComponent<ParticleSystem>();
 		//Destroy (burner.gameObject);	
-					
+
+
+
+				
 		Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
+
+
+
 		Invoke ("BurnDelay", 4.0f); 
 		Destroy (Prefab.gameObject, 3.0f);
-		//AudioSource audio = GetComponent<AudioSource> ();
+		//burnsound.Stop ();
+
 
 		//audio.Play;
 			
@@ -74,5 +86,7 @@ public class Burn : MonoBehaviour
 	{
 		Debug.Log ("Hand is not touching the burner anymore");
 		//Destroy (pointlight);
+		//burnersound.Stop();
+
 	}
 }

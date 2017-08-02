@@ -3,11 +3,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\Burn.cs">
     <Files>
       <File FileName="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\PlayerController.cs" Line="20" Column="35" />
-      <File FileName="Assets\_scripts\Burn.cs" Line="35" Column="28" />
+      <File FileName="Assets\_scripts\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\Burn.cs" Line="31" Column="3" />
       <File FileName="Assets\_scripts\LTouchController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\RTouchController.cs" Line="18" Column="1" />
-      <File FileName="Assets\pointlight.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\RTouchController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
