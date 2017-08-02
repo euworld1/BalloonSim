@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Burn : MonoBehaviour 
 {
+	private Rigidbody rb;
+	float startTemp = 160f;
+	float currentEnvelopeTemp; 
+	float burnAcc = 500;
+	float coolAcc = -500;
+	float coolingRate =10;
+
 
 	public Transform BurnerObject;
 	public GameObject Prefab;
 	// Use this for initialization
 	void Start () 
 	{
+		rb = GetComponent<Rigidbody>();
+		currentEnvelopeTemp = startTemp;
 		//Fire.GetComponent<ParticleSystem>().enableEmission = true;
 		//ps = GetComponent<ParticleSystem>();
 
@@ -18,6 +27,14 @@ public class Burn : MonoBehaviour
 	{
 		//var emmision = ps.emission;
 		//emmision.enabled = moduleEnabled;
+	}
+
+	void BurnDelay()
+	{
+
+		float finalAcc = burnAcc;
+		Vector3 movementy = new Vector3 (0,finalAcc,0);
+		rb.AddForce(movementy);
 	}
 
 //	void OnGUI() 
@@ -35,12 +52,15 @@ public class Burn : MonoBehaviour
 		//Destroy (burner.gameObject);	
 					
 		Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
+		Invoke ("BurnDelay", 4.0f); 
+		Destroy (Prefab.gameObject, 3.0f);
 		//AudioSource audio = GetComponent<AudioSource> ();
 
 		//audio.Play;
 			
 
 	}
+
 
 
 
@@ -53,6 +73,6 @@ public class Burn : MonoBehaviour
 	void OnTriggerExit(Collider burner)
 	{
 		Debug.Log ("Hand is not touching the burner anymore");
-		Destroy (BurnerObject, 1f);
+		//Destroy (pointlight);
 	}
 }

@@ -680,8 +680,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117866804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0015, y: -0.0005, z: 0.0411}
-  m_LocalScale: {x: 0.0043367404, y: 0.010493822, z: 0.009385914}
+  m_LocalPosition: {x: -0.0015, y: -0.0005, z: 0.0379}
+  m_LocalScale: {x: 0.0043367404, y: 0.0013117268, z: 0.0019944995}
   m_Children: []
   m_Father: {fileID: 1910948039}
   m_RootOrder: 0
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BurnerObject: {fileID: 1117866805}
-  Prefab: {fileID: 1000012557550798, guid: 51abb567ee9c5d848a7ffd806fabc6ef, type: 2}
+  Prefab: {fileID: 1000011938133602, guid: 51abb567ee9c5d848a7ffd806fabc6ef, type: 2}
 --- !u!65 &1117866807
 BoxCollider:
   m_ObjectHideFlags: 0
