@@ -339,9 +339,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.6
+      minMaxState: 0
+      scalar: 30
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -432,8 +432,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3.11
-      minScalar: 0.110000014
+      scalar: 0.5
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -658,7 +658,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -25
+      scalar: -1
       minScalar: -0.12
       maxCurve:
         serializedVersion: 2
@@ -700,12 +700,12 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 5.05905
+    angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0.3}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -721,7 +721,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.09
       mode: 0
       spread: 0
       speed:
@@ -816,7 +816,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 11.9
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -898,7 +898,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -942,7 +942,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -983,7 +983,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1311,7 +1311,7 @@ ParticleSystem:
     sprites:
     - sprite: {fileID: 0}
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -1437,7 +1437,7 @@ ParticleSystem:
         m_RotationOrder: 4
     inWorldSpace: 1
   InheritVelocityModule:
-    enabled: 0
+    enabled: 1
     m_Mode: 0
     m_Curve:
       serializedVersion: 2
@@ -1608,7 +1608,7 @@ ParticleSystem:
     inWorldSpace: 1
     randomizePerFrame: 0
   ExternalForcesModule:
-    enabled: 1
+    enabled: 0
     multiplier: 1
   ClampVelocityModule:
     enabled: 0
@@ -1656,7 +1656,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2

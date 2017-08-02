@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\Burn.cs" Line="31" Column="3" />
+      <File FileName="Assets\_scripts\Burn.cs" Line="7" Column="4" />
       <File FileName="Assets\_scripts\LTouchController.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\RTouchController.cs" Line="1" Column="1" />
     </Files>
