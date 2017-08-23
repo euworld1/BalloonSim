@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_scenes/trippyWater.unity
+- path: Assets/_scenes/withSkyBox.unity
   isLoaded: 1
   isActive: 1

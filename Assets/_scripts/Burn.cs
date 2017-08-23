@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Burn : MonoBehaviour 
 {
-	//private AudioSource burnersound;
+	//public AudioSource audio;
+	public GameObject BurnerSound;
+	public Transform BurnerObject;
+	public GameObject Prefab;
 	private Rigidbody rb;
 	float startTemp = 160f;
 	float currentEnvelopeTemp; 
-	float burnAcc = 500;
+	float burnAcc = 1000;
 	float coolAcc = -500;
 	float coolingRate =10;
+	bool isBurnerBurning = false;
 
 
-	public Transform BurnerObject;
-	public GameObject Prefab;
+
+
 	// Use this for initialization
 	void Start () 
 	{
-		//burnersound = GetComponent<AudioSource> ();
+		
+	
+		AudioSource audio = GetComponent<AudioSource> ();
+
 		rb = GetComponent<Rigidbody>();
 		currentEnvelopeTemp = startTemp;
 
@@ -27,8 +34,10 @@ public class Burn : MonoBehaviour
 		//ps = GetComponent<ParticleSystem>();
 
 	}
-	void Update() 
+	void FixedUpdate() 
 	{
+		
+		//burnersound.Pause();
 		//var emmision = ps.emission;
 		//emmision.enabled = moduleEnabled;
 	}
@@ -48,29 +57,64 @@ public class Burn : MonoBehaviour
 	
 	void OnTriggerEnter()
 	{
-		//burnersound.Play();
+		
 
-		//Debug.Log ("Hand is touching the burner start");
+		Debug.Log ("OnTriggerEnter");
 		//Fire.GetComponent<ParticleSystem> ().enableEmission = true;
 		//burner.rigidbody.GetComponent<ParticleSystem> ().enableEmission;
 		//ParticleSystem ps = GetComponent<ParticleSystem>();
 		//Destroy (burner.gameObject);	
 
 
+		//Delay in lift reaction
 
-				
-		Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
+		//fireflame
+
+		//if (isBurnerBurning == true) 
+		//{
+		//playSound ();
+		//}
+		playSound ();
+		//BurnDelay ();
+		Invoke ("BurnDelay", 4.0f);
+		startFlame ();
+		//play sound
+		//4 sec reaction
+
+		//Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
+		//Invoke ("BurnDelay", 4.0f);
+		//audio.Play ();
+
+		//Start burner particle system
 
 
 
-		Invoke ("BurnDelay", 4.0f); 
-		Destroy (Prefab.gameObject, 3.0f);
+		 
+
+
+
+
+		//Destroy (Prefab.gameObject, 3.0f);
 		//burnsound.Stop ();
 
 
 		//audio.Play;
 			
 
+	}
+
+	void playSound()
+	{	
+	
+		//audio.Play ();
+
+	}
+
+	void startFlame()
+	{
+
+		//yield return isBurnerBurning = true;
+		Instantiate(Prefab, BurnerObject.position, BurnerObject.rotation);
 	}
 
 
@@ -84,9 +128,11 @@ public class Burn : MonoBehaviour
 
 	void OnTriggerExit(Collider burner)
 	{
-		Debug.Log ("Hand is not touching the burner anymore");
+		//Debug.Log ("Hand is not touching the burner anymore");
 		//Destroy (pointlight);
 		//burnersound.Stop();
 
 	}
+
+
 }

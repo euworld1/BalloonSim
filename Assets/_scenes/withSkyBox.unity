@@ -781,6 +781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9504687af2950b4459cfa6ced65c758b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
+  BurnerSound: {fileID: 1000012557550798, guid: 5d10ff3e75ac32c4db570f067e8b2c21,
+    type: 2}
   BurnerObject: {fileID: 1117866805}
   Prefab: {fileID: 1000011938133602, guid: 5d10ff3e75ac32c4db570f067e8b2c21, type: 2}
 --- !u!65 &1117866807
