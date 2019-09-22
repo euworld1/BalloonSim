@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/adding_cameras.unity
+- path: Assets/_current_Scenes/BackyardBalloonVer1.unity
   isLoaded: 1
   isActive: 1
